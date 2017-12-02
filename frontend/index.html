@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Demo</title>
+    </head>
+    <body>
+        {{range $index, $element := .}}
+		{{$element.Name}} : {{$element.Comment}}
+        </br>
+        {{end}}
+
+		<form action="/create" method="post">
+		    <div>
+		    <label for="">Username</label>
+		    <input name="username" type="text">
+            </div>
+            <div>
+		    <label for="">Comment</label>
+		    <input name="comment" type="text">
+            </div>
+		    <button>Submit</button>
+		</form>
+    </body>
+</html>
