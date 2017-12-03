@@ -3,23 +3,28 @@
     <head>
         <meta charset="UTF-8">
         <title>Demo</title>
+        <style>
+            img {
+                max-width: 10em;
+            }
+        </style>
     </head>
     <body>
         {{range $index, $element := .}}
-		{{$element.Name}} : {{$element.Comment}}
-        </br>
+            {{$element.Name}} : {{$element.Comment}}
+            </br>
         {{end}}
 
-		<form action="/create" method="post">
-		    <div>
-		    <label for="">Username</label>
-		    <input name="username" type="text">
+        <form action="/create" method="post">
+            <div>
+                <label for="">Username</label>
+                <input name="username" type="text">
             </div>
             <div>
-		    <label for="">Comment</label>
-		    <input name="comment" type="text">
+                <label for="">Comment</label>
+                <textarea name="comment"></textarea>
             </div>
-		    <button>Submit</button>
-		</form>
+            <button>Submit</button>
+        </form>
     </body>
 </html>
